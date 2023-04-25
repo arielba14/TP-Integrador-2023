@@ -1,0 +1,63 @@
+/* 
+    ####### Trabajo Práctico Integrador    #######
+    Codo a Codo 2023
+    Alumno: Ariel Barotto
+    Comisión:23050
+    Profesor: Cristian Gadea
+
+*/
+
+/*se modifica el color de fodno de la clase bg-dark de BOOSTRAP*/
+.bg-dark { background: #333a40!important; }
+
+/* Se modifica el color del nav-link a verde*/
+.navbar-dark .navbar-nav .link-verde { color: #25a342;}
+
+/* Se modifica el color del botón cuando el puntero del mouse para por encima del botón*/
+.link-verde:hover { background-color:#25a342;}
+
+/* se modicia el tamaño del carrusel*/
+.carrusel {      
+    height: 37rem;
+    min-height: 95vh;
+}
+
+/* Se opacan las imagenes del carrsuel para que se pueda ver el texto*/
+.opacar-img { filter: brightness(40%); }
+
+/* Se cambia el color de fondo y el color de las letras del botón del carrusel*/
+.color-boton {
+    background-color: #31b14f;
+    color: white;
+}
+
+/* Se modifican los títulos de los oradores y en el formulario*/
+.letra-pequeña{
+    font-size: small;
+    font-weight: 300;
+}
+
+.fondo {
+    background: #333a40;
+    color: antiquewhite;
+    padding: 1%;
+}
+
+/* se modifican los márgenes del formulario*/
+.margenes-form {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+/* se modifican los márgenes del footer*/
+.margenes-footer {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+/* se modifican los colores del footer*/
+.footer {
+    background: #1d3c4e;
+    color: #fff;
+    padding: 1%;   
+}
