@@ -55,11 +55,11 @@ function borrarForm(){
     document.getElementById("selCategoria").value = "Estudiante";
 }
 
-//cambia el active de los link (activa el que pasan por parámetro y saca el que estaba antes)
 function activarLink(id){
   const link = document.getElementById(id);
-  const activo = document.querySelector(".active");
+  const activo = document.querySelector(".active");  
   activo.classList.remove("active");
   link.classList.add("active");
+  document.getElementById("carru").classList.add("active");
 }
 
