@@ -33,19 +33,19 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#conferencia">La conferencia</a>
+                            <a id = "linkConferencia" class="nav-link" aria-current="page" href="index.html#conferencia" onclick = "activarLink('linkConferencia')">La conferencia</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#oradores">Los oradores</a>
+                            <a id = "linkOradores" class="nav-link" href="index.html#oradores" onclick = "activarLink('linkOradores')">Los oradores</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#lugar">El lugar y la fecha</a>
+                            <a class="nav-link" href="index.html#lugar">El lugar y la fecha</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#formulario">Conviértete en orador</a>
+                            <a class="nav-link" href="index.html#formulario">Conviértete en orador</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link link-verde" href="#">Comprar tickets</a>
+                            <a class="nav-link disabled" href="#">Comprar tickets</a>
                         </li>
                     </ul>
                 </div>
@@ -89,17 +89,17 @@
                     <h6 class="letra-pequeña">VENTA<h6>
                     <h2>VALOR DE TICKET     $200</h2>
                 </div>
-                <div class="container">
+                <form class="container" method="get" action="index.html" id="form">
                     <div class="row">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Nombre" id="txtNombre">
+                            <input type="text" class="form-control" placeholder="Nombre" id="txtNombre" required>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Apellido" id="txtApellido">
+                            <input type="text" class="form-control" placeholder="Apellido" id="txtApellido" required>
                         </div>
                     </div>
                     <div class="col mt-3">
-                        <input type="email" class="form-control" placeholder="Correo" id="txtCorreo">
+                        <input type="email" class="form-control" placeholder="Correo" id="txtCorreo" required>
                     </div>
                     <div class="row mt-3">
                         <div class="col">
@@ -111,10 +111,10 @@
                     </div>
                     <div class="row mt-1">
                         <div class="col">                    
-                            <input type="number" class="form-control" placeholder="Cantidad" id="txtCantidad">
+                            <input type="number" class="form-control" placeholder="Cantidad" id="txtCantidad" required>                            
                         </div>
                         <div class="col">
-                            <select id="categoria" class="form-select" id="selCategoria">
+                            <select id="selCategoria" class="form-select">
                                 <option selected>Estudiante</option>
                                 <option>Trainee</option>
                                 <option>Junior</option>
@@ -131,10 +131,11 @@
                             <button type="button" class="btn color-boton btn-lg" id ="btnBorrar" onclick="borrarForm()">Borrar</button>
                         </div>
                         <div class = "col d-grid">
-                            <button type="button" class="btn color-boton btn-lg" id="btnResumen">Resumen</button>
+                            <!--<button type="button" class="btn color-boton btn-lg" id="btnResumen" onclick="comprarTickets()">Resumen</button>-->
+                            <input type="submit" class="btn color-boton btn-lg" value="Resumen">
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </main>
