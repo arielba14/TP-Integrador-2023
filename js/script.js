@@ -3,7 +3,15 @@ const seleccion = document.getElementById("selCategoria");
 const form = document.getElementById("form");
 
 
+
 //Escucho Eventos
+
+cantidad.addEventListener("keydown", (event) => {
+  if ((event.key==".") || (event.key=="e") || (event.key==",") || (event.key=="-") || (event.key=="+")){
+    event.preventDefault();
+  }
+})
+
 cantidad.addEventListener("focusout", (event) => {    
   calcularImporte(cantidad.value, seleccion.value);
 });  
@@ -55,6 +63,7 @@ function borrarForm(){
     document.getElementById("selCategoria").value = "Estudiante";
 }
 
+//cambia el active de los link (activa el que pasan por parámetro y saca el que estaba antes)
 function activarLink(id){
   const link = document.getElementById(id);
   const activo = document.querySelector(".active");  
@@ -62,4 +71,5 @@ function activarLink(id){
   link.classList.add("active");
   document.getElementById("carru").classList.add("active");
 }
+
 
