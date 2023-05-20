@@ -4,29 +4,35 @@ const form = document.getElementById("form");
 
 
 
+
 //Escucho Eventos
 
+//controlo que en el campo de cantidad no ingrese puntos, comas, signso, letra e
 cantidad.addEventListener("keydown", (event) => {
   if ((event.key==".") || (event.key=="e") || (event.key==",") || (event.key=="-") || (event.key=="+")){
     event.preventDefault();
   }
 })
 
+//hago el cálculo del importe cuando pierde el focus el campo cantidad
 cantidad.addEventListener("focusout", (event) => {    
   calcularImporte(cantidad.value, seleccion.value);
 });  
 
+//hago el cálculo del importe cuando cambia la selección
 seleccion.addEventListener("change", (event) =>{
   if (cantidad.value != ""){
     calcularImporte(cantidad.value, seleccion.value);
   }
 })
 
+// antes de que envie el formulario le infomro que la compra se ralizó con éxito
 form.addEventListener("submit", (event) => {  
   event.preventDefault();
   alert(document.getElementById("txtNombre").value + " " + document.getElementById("txtApellido").value + " su compra se ha realizado con éxito!!");
   form.submit();
 });
+
 
 //calculo el importe a pagar
 function calcularImporte(entradas, tipo){
