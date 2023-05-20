@@ -1,7 +1,7 @@
 const cantidad = document.getElementById("txtCantidad");
 const seleccion = document.getElementById("selCategoria");
 const form = document.getElementById("form");
-
+var costo = 0;
 
 
 
@@ -26,17 +26,23 @@ seleccion.addEventListener("change", (event) =>{
   }
 })
 
-// antes de que envie el formulario le infomro que la compra se ralizó con éxito
+// antes de que envie el formulario le informo que la compra se ralizó con éxito
 form.addEventListener("submit", (event) => {  
   event.preventDefault();
-  alert(document.getElementById("txtNombre").value + " " + document.getElementById("txtApellido").value + " su compra se ha realizado con éxito!!");
-  form.submit();
+  console.log(costo);
+  if (costo > 0){
+    alert(document.getElementById("txtNombre").value + " " + document.getElementById("txtApellido").value + " su compra se ha realizado con éxito!!\nResumen\n" + cantidad.value + " entradas " + seleccion.value + "\nCosto Total: $" + costo);
+    form.submit();
+  }else{
+    alert("Debe definir la cantidad de entradas");
+    cantidad.focus();
+  }  
 });
 
 
 //calculo el importe a pagar
 function calcularImporte(entradas, tipo){
-  let costo = entradas * 200;
+  costo = entradas * 200;
   let descuento = 0
   switch (tipo){
     case "Estudiante":
