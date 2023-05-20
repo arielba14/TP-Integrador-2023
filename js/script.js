@@ -28,8 +28,7 @@ seleccion.addEventListener("change", (event) =>{
 
 // antes de que envie el formulario le informo que la compra se ralizó con éxito
 form.addEventListener("submit", (event) => {  
-  event.preventDefault();
-  console.log(costo);
+  event.preventDefault();  
   if (costo > 0){
     alert(document.getElementById("txtNombre").value + " " + document.getElementById("txtApellido").value + " su compra se ha realizado con éxito!!\nResumen\n" + cantidad.value + " entradas " + seleccion.value + "\nCosto Total: $" + costo);
     form.submit();
