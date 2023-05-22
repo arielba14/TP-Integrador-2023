@@ -3,8 +3,6 @@ const seleccion = document.getElementById("selCategoria");
 const form = document.getElementById("form");
 var costo = 0;
 
-
-
 //Escucho Eventos
 
 //controlo que en el campo de cantidad no ingrese puntos, comas, signso, letra e
@@ -74,6 +72,7 @@ function borrarForm(){
     document.getElementById("selCategoria").value = "Estudiante";
 }
 
+/*
 //cambia el active de los link (activa el que pasan por parámetro y saca el que estaba antes)
 function activarLink(id){
   const link = document.getElementById(id);
@@ -81,6 +80,6 @@ function activarLink(id){
   activo.classList.remove("active");
   link.classList.add("active");
   document.getElementById("carru").classList.add("active");
-}
+}*/
 
 
